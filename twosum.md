@@ -17,6 +17,7 @@
 ```
 代码：
 ```python
+#遍历列表同时查字典
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         #字典{value:key}
