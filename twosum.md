@@ -6,9 +6,11 @@
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
 ### 思路：
-
+想判断num2 = target - num1是否也在 list 中，并返回数组下标。
+1. dct['key'] = 'value'
+2. 每种输入只会对应一个答案
 ### 代码：
-```
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
  #   def  twoSum(nums, target): 
