@@ -20,11 +20,10 @@
 #遍历列表同时查字典
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        #字典{value:key}
         dct = {}
         for i, n in enumerate(nums):
-        #判断target-num1是否在字典中   若在 返回num1, num2数组下标   若不在 将num1放入字典中 dct(num1:key)
+        #判断target-num1是否在字典中.若在,返回num1 num2数组下标,若不在,将num1放入字典中 dct(num1:key).
             if target -n in dct:
-                return[dct[target -n], i]
+                return[dct[target-n], i]
             dct[n] = i
 ```
