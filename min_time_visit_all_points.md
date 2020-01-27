@@ -7,7 +7,18 @@
 ```
 示例：
 ![image](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/1626_example_1.png)
+```
+输入：points = [[1,1],[3,4],[-1,0]]
+输出：7
+解释：一条最佳的访问路径是： [1,1] -> [2,2] -> [3,3] -> [3,4] -> [2,3] -> [1,2] -> [0,1] -> [-1,0]   
+从 [1,1] 到 [3,4] 需要 3 秒 
+从 [3,4] 到 [-1,0] 需要 4 秒
+一共需要 7 秒
+示例 2：
 
+输入：points = [[3,2],[-2,2]]
+输出：5
+```
 提示：
 ```
 points.length == n
@@ -17,9 +28,12 @@ points[i].length == 2
 ```
 思路：
 ```
-
+遍历整个数组，对于数组中的**相邻两个点**，计算出它们的切比雪夫距离，所有的距离之和即为答案。 
+x0,x1为上一点横纵坐标，y0，y1为下一点横纵坐标
 ```
 代码：
 ```python
-
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        return sum(s in J for s in S)
 ```
