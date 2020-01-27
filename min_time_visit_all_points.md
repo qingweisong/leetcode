@@ -6,12 +6,13 @@
 必须按照数组中出现的顺序来访问这些点。
 ```
 示例：
-```
 ![image](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/1626_example_1.png)
-```
 提示：
 ```
-
+points.length == n
+1 <= n <= 100
+points[i].length == 2
+-1000 <= points[i][0], points[i][1] <= 1000
 ```
 思路：
 ```
