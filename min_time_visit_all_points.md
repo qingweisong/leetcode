@@ -7,6 +7,7 @@
 ```
 示例：
 ![image](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/1626_example_1.png)
+
 提示：
 ```
 points.length == n
