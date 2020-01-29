@@ -4,6 +4,7 @@
 现有一个链表 -- head = [4,5,1,9]，它可以表示为:
 ```
 ![image](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/01/19/237_example.png)
+
 示例：
 ```
 输入: head = [4,5,1,9], node = 5
