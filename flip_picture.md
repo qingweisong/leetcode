@@ -27,19 +27,19 @@
 用 1 - 当前值，得到的就是0和1的翻转
 用 1 ^ 当前值，得到的也是0和1的反转。这个符号是异或，相同为0，相异为1
 
-In Python, the shortcut row[~i] = row[-i-1] = row[len(row) - 1 - i]helps us find the i-th value of the row, counting from the right.
-对于 A[i][j]，我们将它和 A[i][c - j - 1] 进行交换（即翻转），其中 c 是数组 A 的列数。
+对原列表做两次翻转工作
+首尾反转采用双指针，一个指向头，一个指向尾，两个位置交换并且指针逐渐往中间靠
+返回原列表
 ```
 代码：
 ```python
 class Solution:
     def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
-        for row in A:
-            for i in range((len(row) + 1) / 2):
-                """
-                In Python, the shortcut row[~i] = row[-i-1] = row[len(row) - 1 - i]
-                helps us find the i-th value of the row, counting from the right.
-                """
-                row[i], row[~i] = row[~i] ^ 1, row[i] ^ 1
+        for row in A:       
+            for k,_ in enumerate(row): row[k] = 1 - row[k]        # Python 风格的循环, 1和0反转
+            i, j = 0, len(row) - 1
+            while i < j:
+                row[i], row[j] = row[j], row[i] # Python 特有的交换
+                i, j = i + 1, j - 1
         return A
 ```
