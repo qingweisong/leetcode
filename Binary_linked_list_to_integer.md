@@ -4,6 +4,7 @@
 请你返回该链表所表示数字的 十进制值 。
 ```
 示例：
+
 ![](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/12/15/graph-1.png)
 ```
 输入：head = [1,0,1]
