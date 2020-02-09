@@ -23,12 +23,7 @@ R x C 的矩阵 A 转置后会得到尺寸为 C x R 的矩阵 ans，ans[c][r] = 
 ```
 代码：
 ```python
-class Solution(object):
-    def transpose(self, A):
-        R, C = len(A), len(A[0])
-        ans = [[None] * R for _ in xrange(C)]
-        for r, row in enumerate(A):
-            for c, val in enumerate(row):
-                ans[c][r] = val
-        return ans
+class Solution:
+    def transpose(self, A) :
+        return list(zip(*A))
 ```
