@@ -18,12 +18,16 @@
 ```
 思路：
 ```
-R x C 的矩阵 A 转置后会得到尺寸为 C x R 的矩阵 ans，ans[c][r] = A[r][c]。
-初始化一个新的矩阵 ans 来表示答案
+
 ```
 代码：
 ```python
+#法一
 class Solution:
     def transpose(self, A) :
         return list(zip(*A))
+#法二
+class Solution:
+    def transpose(self, A) :
+        return [[x[i] for x in A] for i in range(len(A[0]))] 
 ```
