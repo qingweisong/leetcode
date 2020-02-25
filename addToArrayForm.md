@@ -41,10 +41,13 @@ class Solution:
     def addToArrayForm(self, A: List[int], K: int) -> List[int]:
         m = 0
         sums = 0
+        #左闭右开 start end step
         for i in range(len(A)-1, -1, -1):
             sums += A[i]*10**m
             m += 1
+        
         sums += K
+        #数字转数组  先转成字符串 再append到数组中
         sums = str(sums)
         A = []
         for x in sums:
