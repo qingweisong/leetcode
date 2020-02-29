@@ -15,7 +15,8 @@
 ```
 思路：
 ```
-
+函数中的函数需手动调用
+递归算法 调用自身
 ```
 代码：
 ```python
@@ -28,6 +29,7 @@ class Solution:
             helper(root.left)
             res.append(root.val)
             helper(root.right)
+        #
         helper(root)
         return res
 ```
