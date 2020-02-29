@@ -17,6 +17,11 @@
 ```
 函数中的函数需手动调用
 递归算法 调用自身
+1.传入root.left(null)    进入if return
+2.res.append(1)
+3.传入root.right(2)  不进入if  传入root.left(3)  传入3.left  进入if return res.append(3)  传入3.right  进入if  returrn   
+4.res.append(2)
+5.传入2.right(null) return
 ```
 代码：
 ```python
